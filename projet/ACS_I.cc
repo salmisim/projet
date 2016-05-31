@@ -2,7 +2,7 @@
  Projektname:       ACS I.cprj
  Benötigte Libs´s:  IntFunc_lib.cc
  Routinen:          ASC_I.cc
- Autor:             UlliS
+ Autor:             UlliS.
  Datum:             03.02.2009
 
  Funktion:          PRO-BOT128 fährt umher, und weicht dabei Hindernisse über
