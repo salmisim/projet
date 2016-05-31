@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<DOCUMENT>
+  <LibraryForm.rsPropSaver1>
+    <LMDCheckListBox1.Items value="DCF_Lib.cc&cr;&lf;IntFunc_Lib.cc&cr;&lf;Key_Lib.cc&cr;&lf;LCD_Lib.cc&cr;&lf;String_Lib.cc&cr;&lf;"/>
+    <LMDStrList1.Items value="0&cr;&lf;1&cr;&lf;0&cr;&lf;0&cr;&lf;0&cr;&lf;"/>
+  </LibraryForm.rsPropSaver1>
+  <Projects>
+    <Proj1>
+      <PrjChip value="2"/>
+      <PrjName value="ACS_II"/>
+      <PrjOptions value="0"/>
+      <ThreadData value="0;1;128;5000&lf;1;0;128;5000&lf;2;0;128;5000&lf;3;0;128;5000&lf;4;0;128;5000&lf;5;0;128;5000&lf;6;0;128;5000&lf;7;0;128;5000&lf;8;0;128;5000&lf;9;0;128;5000&lf;10;0;128;5000&lf;11;0;128;5000&lf;12;0;128;5000&lf;13;0;128;5000&lf;"/>
+      <Files>
+        <0 value="ACS_II.cc"/>
+        <1 value="..\PRO-BOT128C_Lib\PRO-BOT128C_Lib.cc"/>
+      </Files>
+    </Proj1>
+  </Projects>
+</DOCUMENT>
