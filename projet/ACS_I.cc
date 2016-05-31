@@ -1,32 +1,32 @@
 /*******************************************************************************
  Projektname:       ACS I.cprj
- Benötigte Libs´s:  IntFunc_lib.cc
+ BenÃ¶tigte LibsÂ´s:  IntFunc_lib.cc
  Routinen:          ASC_I.cc
  Autor:             UlliS
  Datum:             03.02.2009
 
- Funktion:          PRO-BOT128 fährt umher, und weicht dabei Hindernisse über
+ Funktion:          PRO-BOT128 fÃ¤hrt umher, und weicht dabei Hindernisse Ã¼ber
                     das ACS (Anti Collisions System) aus.
                     Der Roboter wird in diesem Demo immer eine leichte Kurve
                     fahren, da hier keine Motor-Gleichlaufregelung vorhanden ist.
                     Sollte PRO-BOT128 Hindernisse nicht erkennen, oder das ACS System
-                    ständig auch ohne Hindernisse regieren, muss ACS_Init()
-                    verändert werden! (Bereich von 1 bis 20)
-                    Hier sollte man die Parameter Schritt für Schritt auf die
+                    stÃ¤ndig auch ohne Hindernisse regieren, muss ACS_Init()
+                    verÃ¤ndert werden! (Bereich von 1 bis 20)
+                    Hier sollte man die Parameter Schritt fÃ¼r Schritt auf die
                     richtigen Werte trimmen.
 
                      Projektname:       LineRacer.cprj
- Benötigte Libs´s:  IntFunc_lib.cc
+ BenÃ¶tigte LibsÂ´s:  IntFunc_lib.cc
  Routinen:          LineRacer.cc, PRO-BOT128C_Lib.cc
  Autor:             UlliS
  Datum:             03.02.2009
 
  Funktion:          PRO-BOT128 folgt einer schwarzen Linie auf den Boden.
-                    Dazu müssen wir uns einen hellen Untergrund z.B. einen
-                    Parket Boden oder eine große weiße Pappe suchen.
+                    Dazu mÃ¼ssen wir uns einen hellen Untergrund z.B. einen
+                    Parket Boden oder eine groÃŸe weiÃŸe Pappe suchen.
                     Darauf kleben wir mit schwarzem Isolierband (etwa 2cm breit)
-                    eine Kreisrunde Bahn auf (Durchmesser etwa 1m oder größer).
-                    Natürlich kann die Bahn auch andere Formen besitzen, wichtig
+                    eine Kreisrunde Bahn auf (Durchmesser etwa 1m oder grÃ¶ÃŸer).
+                    NatÃ¼rlich kann die Bahn auch andere Formen besitzen, wichtig
                     die Kurvenradien sollten aber nicht zu klein sein!
                     Unser Roboter wird auf die so auf die Linie gestellt, das
                     ein Fototransitor (T1) auf die schwarze Line blickt, und der
@@ -37,8 +37,8 @@
                     Nach dem wir den Roboter richtig platziert haben, schalten wir
                     unseren PRO-BOT128 ein. Die Line LED muss nach 1Sekunde
                     einschalten, und der Roboter folgt der Linie.
-                    Sollte er in den Kurven ausbrechen, müssen die Regler Parameter
-                    P, I, D verändert werden und evtl. T1 und T2 leicht justiert
+                    Sollte er in den Kurven ausbrechen, mÃ¼ssen die Regler Parameter
+                    P, I, D verÃ¤ndert werden und evtl. T1 und T2 leicht justiert
                     werden, bis der  Roboter der Linie sauber folgt. Der Abstand
                     von T1, T2 und D1 sollte etwa 5mm zur Fahrbahn betragen!
                     Hier ist eventuell etwas Basteln und Forschergeist gefragt!
@@ -87,7 +87,7 @@ void main(void)
        Status_LEDS();  //Switsch Status LEDs
 
         //Drive behaviour
-       if ((ACS_L == 1) && (ACS_R == 1)) Forward();
+       //if ((ACS_L == 1) && (ACS_R == 1)) Forward();
         if ((ACS_L == 0) && (ACS_R == 0)) Backward();
         if ((ACS_L == 1) && (ACS_R == 0)) Turn_Left();
         if ((ACS_L == 0) && (ACS_R == 1)) Turn_Right();
@@ -132,8 +132,8 @@ void ACS_Init(byte sensitivity)
 
     //Calculating the pulse width modulation
     //Timer_T3PWM(Par1,Par2,PS);
-    //Period=Par1*PS/FOSC (51*8/14,7456MHz=27,66 µs)  = 36Khz
-    //Pulse=Par2*PS/FOSC (25*8/14,7456MHz=13,56 µs) On Time
+    //Period=Par1*PS/FOSC (51*8/14,7456MHz=27,66 Âµs)  = 36Khz
+    //Pulse=Par2*PS/FOSC (25*8/14,7456MHz=13,56 Âµs) On Time
 
     //Timer_T3PWM(Word period,Word PW0,Byte PS)  --> 36Khz
     Timer_T3PWM(51,sensitivity,PS_8);   //with Par1, Par2 can reach altered!
